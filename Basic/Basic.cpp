@@ -36,7 +36,7 @@ int main() {
       try {
          processLine(getLine(), program, state);
       } catch (ErrorException & ex) {
-         cerr << "Error: " << ex.getMessage() << endl;
+//          cerr << "Error: " << ex.getMessage() << endl;
       }
    }
    return 0;
