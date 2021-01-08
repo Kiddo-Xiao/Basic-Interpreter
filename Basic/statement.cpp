@@ -34,7 +34,7 @@ void INPUT_statement::execute(EvalState &state) {
     string value;
     while(true){
         try{
-            value=getLine("?");
+            value=getLine(" ? ");
             tmp=stringToInteger(value);
         }catch(...){//all error
             cout<<"INVALID NUMBER"<<endl;
