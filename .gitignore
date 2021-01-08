@@ -1,0 +1,11 @@
+# Project exclude paths
+/cmake-build-debug/
+/Test/
+/makefile-for-judge
+/Demo/
+/.idea/modules.xml
+/Demo/Basic-Demo-64bit
+/.idea/linux.iml
+/.idea/misc.xml
+/Demo/Basic-Demo-32bit
+/.idea/.gitignore
