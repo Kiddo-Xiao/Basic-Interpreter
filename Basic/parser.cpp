@@ -145,6 +145,7 @@ Statement *parse_sta(TokenScanner & scanner,string line) {
         Expression *fir,*sec;
         GOTO_statement *to_line;
         if(line.find('=')==string::npos){//没有=
+
             fir=readE(scanner);
             comp=scanner.nextToken();
             if(comp!="<"&&comp!=">"&&comp!="=")delete fir,error("SYNTAX ERROR");
@@ -152,12 +153,14 @@ Statement *parse_sta(TokenScanner & scanner,string line) {
                 sec=readE(scanner);
             }catch(...){delete fir,error("SYNTAX ERROR");}
 
+//            puts("FUCK");
             token=scanner.nextToken();
             if(token!="THEN")delete fir,error("SYNTAX ERROR");
             token=scanner.nextToken();
             type=scanner.getTokenType(token);
             if(type!=NUMBER) delete fir,delete sec,error("SYNTAX ERROR");
-            if(!scanner.hasMoreTokens())delete fir,delete sec,error("SYNTAX ERROR");
+            if(scanner.hasMoreTokens())delete fir,delete sec,error("SYNTAX ERROR");
+//            puts("FUCK");
 
             int _line;
             try{
