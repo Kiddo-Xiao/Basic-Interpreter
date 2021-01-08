@@ -100,7 +100,7 @@ void processLine(string line, Program & program, EvalState & state) {
        if(scanner.hasMoreTokens()) throw ErrorException("SYNTAX ERROR");
        while(true){
            try{
-               str_value=getLine("?");
+               str_value=getLine(" ? ");
                value=stringToInteger(str_value);
            }catch(...){
                cout<<"INVALID NUMBER"<<endl;
